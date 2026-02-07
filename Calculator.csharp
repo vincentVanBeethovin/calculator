@@ -1,0 +1,85 @@
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine ("Enter the first number:");
+        int a = int.Parse(Console.ReadLine());
+        
+        Console.WriteLine("Enter the 2nd number:");
+        int b = int.Parse(Console.ReadLine());
+        
+        while(true)
+        {
+        display();
+        
+    
+    String choice = Console.ReadLine();
+    switch (choice)
+    {
+        case "+":
+            Console.WriteLine("After adding " + add(a,b));
+            break;
+        case "-":
+            Console.WriteLine("After Subtracting " + Subtract(a, b));
+            break;
+        case "*":
+            Console.WriteLine("After Multiplying " + multiply(a,b));
+            break;
+        case "/":
+            Console.WriteLine("After dividing " + divide(a,b));
+            break;
+        case "%" :
+            Console.WriteLine(" Result " + modulo(a,b));
+            break;
+        case "=":
+            end();
+            return;
+        break;
+        default:
+        Console.WriteLine("Invalid Operation used, Please try again.");
+        break;
+            }
+        }  
+    }
+    static void display()
+    {
+        Console.WriteLine("Chooose an Operation" +
+         "\n + for Addition " +
+         "\n - for Subtraction " +
+         "\n * for Multiplication " +
+         "\n / for diviision " +
+         "\n % for Modulo " +
+         "\n = for Exit ");
+        
+    }
+    
+    static int add(int a, int b)
+    {
+        return a + b;
+        
+    }
+    static int Subtract(int a, int b)
+    {
+        return a - b;
+    }
+    static int multiply(int a, int b)
+    {
+        return a * b;
+    }
+    static int divide(int a, int b)
+    {
+        return a / b;
+    }
+    static double modulo(int a, int b)
+    {
+        return a % b;
+    }
+    static void end()
+    {
+    Console.WriteLine("***Exiting Calculator***" +
+    "\n           :)");
+    }
+}
